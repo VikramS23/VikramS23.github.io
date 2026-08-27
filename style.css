@@ -191,11 +191,16 @@ main{ max-width:var(--max); margin:0 auto; padding:0 32px; }
 /* ===== Skills ===== */
 .skills{ padding:88px 0; border-bottom:1px solid var(--line); }
 .skills__grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+.skills__grid--full{ grid-template-columns:repeat(3, 1fr); gap:36px 32px; }
 .skills__col h4{
   font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:0.06em;
   color:var(--accent); margin-bottom:10px;
 }
-.skills__col p{ color:var(--ink-soft); font-size:15px; }
+.skills__col p{ color:var(--ink-soft); font-size:14px; line-height:1.55; }
+
+@media (max-width: 640px){
+  .skills__grid--full{ grid-template-columns:1fr; }
+}
 
 /* ===== Contact ===== */
 .contact{ padding:96px 0 100px; text-align:center; }
