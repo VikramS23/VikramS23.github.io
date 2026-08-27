@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — Full-Stack Developer</title>
+<meta name="description" content="Full-stack developer portfolio — frontend, backend, and infrastructure work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="topbar">
+  <span class="topbar__mark">AR<span class="dot">.</span></span>
+  <nav class="topbar__nav">
+    <a href="#frontend">Frontend</a>
+    <a href="#backend">Backend</a>
+    <a href="#infra">Infra</a>
+    <a href="#contact" class="topbar__cta">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__text">
+      <p class="eyebrow">Full-stack developer</p>
+      <h1 class="hero__title">I build the whole<br>request&nbsp;→&nbsp;response<br>path.</h1>
+      <p class="hero__sub">Alex Rivera. Interfaces people use, APIs that hold up under load, and the databases underneath both. Based in Austin, TX — open to remote roles.</p>
+      <div class="hero__actions">
+        <a href="#frontend" class="btn btn--primary">See the work</a>
+        <a href="/resume.pdf" class="btn btn--ghost">Resume ↓</a>
+      </div>
+    </div>
+
+    <!-- Signature element: architecture stack diagram -->
+    <div class="stack-diagram" aria-hidden="true">
+      <svg viewBox="0 0 360 400" class="stack-svg">
+        <!-- connecting spine -->
+        <line x1="180" y1="70" x2="180" y2="330" class="stack-spine" />
+
+        <!-- Frontend layer -->
+        <g class="stack-layer" data-layer="frontend">
+          <rect x="40" y="40" width="280" height="70" rx="4" class="layer-rect layer-rect--fe"/>
+          <text x="64" y="70" class="layer-label">FRONTEND</text>
+          <text x="64" y="90" class="layer-sub">React · TypeScript</text>
+        </g>
+
+        <!-- Backend layer -->
+        <g class="stack-layer" data-layer="backend">
+          <rect x="40" y="165" width="280" height="70" rx="4" class="layer-rect layer-rect--be"/>
+          <text x="64" y="195" class="layer-label">BACKEND</text>
+          <text x="64" y="215" class="layer-sub">Node · REST / GraphQL</text>
+        </g>
+
+        <!-- Database layer -->
+        <g class="stack-layer" data-layer="infra">
+          <rect x="40" y="290" width="280" height="70" rx="4" class="layer-rect layer-rect--db"/>
+          <text x="64" y="320" class="layer-label">DATA / INFRA</text>
+          <text x="64" y="340" class="layer-sub">Postgres · Docker · AWS</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about">
+    <p class="section-kicker">01 — About</p>
+    <p class="about__lede">
+      I've spent the last six years moving up and down the stack depending on where a
+      project actually needed me — sometimes that's a slow database query, sometimes
+      it's a confusing checkout flow. I like owning a feature end to end rather than
+      handing it off at the API boundary.
+    </p>
+    <div class="about__facts">
+      <div><span class="fact-num">6</span><span class="fact-label">years shipping production code</span></div>
+      <div><span class="fact-num">30+</span><span class="fact-label">services in production</span></div>
+      <div><span class="fact-num">3</span><span class="fact-label">teams built from scratch</span></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="work">
+    <p class="section-kicker">02 — Selected work</p>
+
+    <article class="project" id="frontend">
+      <div class="project__meta">
+        <span class="tag tag--fe">Frontend-heavy</span>
+        <span class="project__year">2025</span>
+      </div>
+      <h3 class="project__title">Fieldnote</h3>
+      <p class="project__desc">
+        A note-taking tool for field researchers with offline-first sync. I built the
+        editor UI, the conflict-resolution logic for offline edits, and the sync API
+        it talks to.
+      </p>
+      <ul class="project__stack">
+        <li>React</li><li>IndexedDB</li><li>Node</li><li>Postgres</li>
+      </ul>
+      <div class="project__links">
+        <a href="#">Live demo →</a>
+        <a href="#">Source →</a>
+      </div>
+    </article>
+
+    <article class="project" id="backend">
+      <div class="project__meta">
+        <span class="tag tag--be">Backend-heavy</span>
+        <span class="project__year">2024</span>
+      </div>
+      <h3 class="project__title">Ledgerline</h3>
+      <p class="project__desc">
+        Event-sourced billing engine handling metered usage for a B2B SaaS product.
+        Designed the schema, the idempotency model for retried webhooks, and the
+        reconciliation jobs that catch drift before customers see it.
+      </p>
+      <ul class="project__stack">
+        <li>Node</li><li>Postgres</li><li>Redis</li><li>GraphQL</li>
+      </ul>
+      <div class="project__links">
+        <a href="#">Write-up →</a>
+        <a href="#">Source →</a>
+      </div>
+    </article>
+
+    <article class="project" id="infra">
+      <div class="project__meta">
+        <span class="tag tag--db">Infra-heavy</span>
+        <span class="project__year">2023</span>
+      </div>
+      <h3 class="project__title">Portside</h3>
+      <p class="project__desc">
+        Migrated a monolith to containers with zero-downtime deploys. Set up the
+        CI/CD pipeline, staging environments, and the monitoring stack that now
+        pages the team before customers notice anything.
+      </p>
+      <ul class="project__stack">
+        <li>Docker</li><li>AWS</li><li>GitHub Actions</li><li>Grafana</li>
+      </ul>
+      <div class="project__links">
+        <a href="#">Write-up →</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills">
+    <p class="section-kicker">03 — Toolbox</p>
+    <div class="skills__grid">
+      <div class="skills__col">
+        <h4>Frontend</h4>
+        <p>React, TypeScript, Next.js, Tailwind, Vite</p>
+      </div>
+      <div class="skills__col">
+        <h4>Backend</h4>
+        <p>Node.js, Express, GraphQL, REST, Python</p>
+      </div>
+      <div class="skills__col">
+        <h4>Data &amp; Infra</h4>
+        <p>PostgreSQL, Redis, Docker, AWS, GitHub Actions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <p class="section-kicker">04 — Contact</p>
+    <h2 class="contact__title">Building something?<br>Let's talk.</h2>
+    <a href="mailto:alex@example.com" class="contact__email">alex@example.com</a>
+    <div class="contact__links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="/resume.pdf">Resume</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>Designed &amp; built by Alex Rivera</span>
+  <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
