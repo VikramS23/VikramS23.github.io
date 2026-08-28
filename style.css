@@ -188,7 +188,7 @@ main{ max-width:var(--max); margin:0 auto; padding:0 32px; }
 .project__links a:hover{ text-decoration:underline; }
 
 .project_diagram {
-  width: 100%;
+  width: 65%;
   max-width: 100%;
   height: auto;
   margin: 1.5rem 0;
